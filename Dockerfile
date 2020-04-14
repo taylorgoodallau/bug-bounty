@@ -120,6 +120,11 @@ RUN cd ${HOME}/toolkit \
     && make \
     && cp bin/massdns /usr/bin
 
+# SQlMap
+RUN cd ${HOME}/toolkit \
+    && git clone --depth 1 https://github.com/sqlmapproject/sqlmap.git sqlmap
+
+
 # seclists
 RUN cd ${HOME}/wordlists \
     && git clone --depth 1 https://github.com/danielmiessler/SecLists.git
